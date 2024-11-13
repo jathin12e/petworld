@@ -1,0 +1,15 @@
+.position{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.position-1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.position-2{
+    margin-left: 20px;
+    margin-right: 30px;
+}

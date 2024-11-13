@@ -1,0 +1,46 @@
+.home-page{
+    display: flex;
+    justify-content: space-around;
+}
+.part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.font{
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+.img{
+    filter: drop-shadow(16px 16px red);
+    border-radius: 20px;
+}
+.carousel{
+    margin-top:5%;
+}
+.carousel-items{
+    display: flex;
+    justify-content: space-around;
+}
+.text-position{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.carousel-inner{
+    border-radius: 20px;
+    box-shadow: -10px 17px 65px 0px rgba(0,0,0,0.75);
+}
+.down-symbol{
+    display: flex;
+    justify-content: center;
+}
+.input2
+{
+    width: fit-content;
+}
+.button{
+    width: max-content;
+    
+}

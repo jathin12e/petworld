@@ -1,0 +1,30 @@
+.dogs-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+    overflow-x: scroll;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10%;
+}
+.dogs-position::-webkit-scrollbar{
+    display: none;
+}
+
+.image1{
+    border-radius: 60%;
+ }
+
+.image1:hover{
+    box-shadow: -10px 17px 65px 0px rgba(0,0,0,0.75);
+}
+.selling-position{
+    border-right-style: solid;
+    padding-right: 20px;
+}
+.button{
+    border-style: none;
+    color: blue;
+}
