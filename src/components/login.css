@@ -1,32 +1,4 @@
-.back{
+.position{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-.login-position{
-    display: flex;
-    justify-content:center;
-    
-}
-.image2{
-    height: 300px;
-    margin: 10px;
-}
-.body{
-    border-left-style: solid;
-    border-color: grey; 
-    padding: 10px;
-}
-.input-email{
-   border:none;
-   border-bottom-style: ridge;
-   border-left-style: none;
-}
-.submit{
-    margin-top:10px;
-    margin-right: 10px;
-}
-.underline{
-    text-decoration: underline;
+    margin-left: 10px;
 }

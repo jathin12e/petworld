@@ -47,3 +47,14 @@
     cursor: pointer;
     
   }
+  .logout-button {
+    background: none;
+    border: none;
+    color: red;
+    font-size: inherit;
+    cursor: pointer;
+    
+  }
+  
+  
+  

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useCart } from './CartContext';
 
+
 const CartPage = () => {
   const { cartItems, removeFromCart } = useCart();
 
