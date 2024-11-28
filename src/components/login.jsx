@@ -47,7 +47,7 @@ const Login = () => {
             required
             style={styles.input}
           />
-          <button type="submit" style={styles.button}>
+          <button type="submit" style={styles.button}> 
             Login
           </button>
           <p>create an acc?&nbsp;<Link to='/register'>register</Link></p>

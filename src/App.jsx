@@ -8,10 +8,12 @@ import Cart from './components/cart';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { CartProvider } from './components/CartContext';
 import Detail1 from './components/dog-detailspage';
-import Detail2 from './components/cat-details';
+import Detail2 from './components/cat-detailspage';
 import Register from "./register";
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase'; 
+import Search from './components/search'
+
 
 
 const App = () => {
@@ -47,8 +49,9 @@ const App = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
           <Route path="/dog-detailspage/:id" element={<Detail1 />} />
-          <Route path="/cat-details/:id" element={<Detail2 />} />
+          <Route path="/cat-detailspage/:id" element={<Detail2 />} />
           <Route path="/register" element={<Register />} />
+          <Route path='/search' element={<Search />} />
         </Routes>
       </div>
     </CartProvider>

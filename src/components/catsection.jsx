@@ -106,7 +106,7 @@ const DogsPage = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:"center" }}>
         {cats.map((cat) => (
           <div key={cat.id} style={{ margin: '10px', border: '1px solid #ddd', padding: '10px' }}>
-            <Link style={{color:"#000", textDecoration:"none"}} to={`/cat-details/${cat.id}`}><img src={cat.image} alt={cat.name} style={{ width: '300px', height: '300px' }} />
+            <Link style={{color:"#000", textDecoration:"none"}} to={`/cat-detailspage/${cat.id}`}><img src={cat.image} alt={cat.name} style={{ width: '300px', height: '300px' }} />
             <h3>{cat.name}</h3>
             <p>Price: ${cat.price}</p></Link>
             <button onClick={() => {addToCart(cat); alert(`${cat.name} has been added to the cart!`);}} className='btn btn-outline-primary'>Add to Cart</button>
