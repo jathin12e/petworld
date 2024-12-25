@@ -1,0 +1,12 @@
+GET http://localhost:8080/dogs/
+
+
+###
+GET http://localhost:8080/cats/
+
+###
+GET http://localhost:8080/pats/
+
+###
+
+GET http://localhost:8080/search?query=saimese

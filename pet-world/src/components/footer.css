@@ -1,0 +1,15 @@
+.contact-position{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.back{
+    margin-top: 5%;
+    text-align: center;
+    margin:5%;
+    font-weight: bold;
+}
+.input2{
+    margin-top: 2%;
+}

@@ -1,0 +1,21 @@
+.cats-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+    overflow-x: scroll;
+    text-align: center;
+    cursor: pointer;
+}
+.cats-position::-webkit-scrollbar{
+    display: none;
+}
+.image1{
+   border-radius: 60%;
+   height: 250px;
+}
+.button{
+    border-style: none;
+    color: blue;
+}
