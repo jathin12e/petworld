@@ -55,13 +55,13 @@ const Nav = () => {
   return (
     <div className="nav-position">
       <div className="nav1">
-        <img
+        <Link to='/'><img
           src={"images/logo.png"}
           height="80"
           width="80"
           className="image-logo"
           alt="Logo"
-        />
+        /></Link>
         <div className="search-bar-container">
           <input
             type="text"
