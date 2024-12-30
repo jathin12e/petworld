@@ -6,23 +6,22 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // To handle JSON payloads
+app.use(express.json()); 
 
 const dbPath = path.join(__dirname, "dogs.db");
 let db = null;
 
-// Serve static files
+
 app.use("/images/", express.static(path.join(__dirname, "/images")));
 
-// Connect to the database and start the server
 const connectDbAndServer = async () => {
   try {
     db = await open({
       filename: dbPath,
       driver: sqlite3.Database
     });
-    app.listen(8080, () => {
-      console.log("Server running at http://localhost:8080/");
+    app.listen(8080, '192.168.0.107' , () => {
+      console.log("Server running at http://192.168.0.107:8080/");
     });
   } catch (e) {
     console.error(`DB Error: ${e.message}`);
@@ -45,7 +44,7 @@ app.get("/search", async (req, res) => {
   }
 });
 
-// Get all dogs
+
 app.get("/dogs/", async (req, res) => {
   try {
     const query = `SELECT * FROM pets WHERE category = "dog"`;
