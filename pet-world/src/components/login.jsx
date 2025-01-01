@@ -27,10 +27,10 @@ const Login = () => {
     <div style={styles.container}>
       
       {error && <p style={styles.error}>{error}</p>}
-      <div className="position">
+      <div className="login-position">
         <img src="images/images (4).jpeg" height={300} style={{paddingRight:"10px"}}/>
         <form onSubmit={handleLogin} style={styles.form }>
-        <h2 style={{textDecoration:"underline"}}>Login</h2>
+          <h2 style={{textDecoration:"underline"}}>Login</h2>
           <input
             type="email"
             placeholder="Email"
@@ -58,7 +58,7 @@ const Login = () => {
 };
 
 const styles = {
-  container: { maxWidth: "300px", margin: "50px auto", textAlign: "center" },
+  container: { maxWidth: "700px", margin: "50px auto", textAlign: "center" },
   form: { display: "flex", flexDirection: "column", gap: "10px" },
   input: { padding: "10px", fontSize: "16px" },
   button: { padding: "10px", fontSize: "16px", background: "blue", color: "white", border: "none" },

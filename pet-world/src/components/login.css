@@ -1,4 +1,14 @@
-.position{
+.login-position{
     display: flex;
-    margin-left: 10px;
+    flex-direction: row;
+    
+    align-items: center;
+}
+@media (max-width:768px) {
+    .login-position{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
 }

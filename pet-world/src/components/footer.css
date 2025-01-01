@@ -7,9 +7,27 @@
 .back{
     margin-top: 5%;
     text-align: center;
-    margin:5%;
+   
     font-weight: bold;
+    background-color: rgb(189, 186, 186);
+    padding: 10px;
 }
 .input2{
     margin-top: 2%;
+}
+@media (max-width:768px) {
+    .back{
+        margin-top: 5%;
+        text-align: center;
+       
+        font-weight: bold;
+        background-color: rgb(189, 186, 186);
+    }
+    .contact-position{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 20px;
+        
+    }
 }

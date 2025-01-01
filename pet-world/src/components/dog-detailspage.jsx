@@ -26,12 +26,12 @@ const ProductDetailsPage = () => {
         <img
           src={`https://petworld-2bwh.onrender.com/images/${dog.image}`}
           alt={dog.name}
-          width="400"
+          className='image-position'
         />
         <div className="position-2">
-          <h1>{dog.name}</h1>
+          <h1 style={{color:"red"}}>{dog.name}</h1>
           <p>Price: ${dog.price}</p>
-          <p>{dog.DES}</p>
+          <p style={{color:"grey"}}>{dog.DES}</p>
           <button className="btn btn-outline-primary">Order Now</button>&nbsp;
           <button
             onClick={() => {

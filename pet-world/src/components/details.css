@@ -6,10 +6,32 @@
 .position-1{
     display: flex;
     justify-content: space-between;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 10%;
+}
+.image-position{
+    width: 400px;
+    box-shadow: 10px 10px 10px black;
 }
 .position-2{
     margin-left: 20px;
     margin-right: 30px;
+}
+@media (max-width:768px) {
+    .position-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-top: 10%;
+    }  
+    .image-position{
+        width: 300px;
+    } 
+    .position{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }

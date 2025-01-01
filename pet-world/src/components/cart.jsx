@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart } from './CartContext';
-
+import './cart.css'
 
 
 const CartPage = () => {
@@ -24,16 +24,18 @@ const CartPage = () => {
                 alt={item.name}
                 style={{ width: '100px', height: '100px', marginRight: '10px' }}
               />
-              <div style={{ flexGrow: 1 }}>
-                <h3>{item.name}</h3>
-                <p>Price: ${item.price}</p>
-              </div>
-              <button
-                onClick={() => handleRemoveFromCart(item)}
-                style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px', cursor: 'pointer' }}
-              >
-                Remove
-              </button>
+              
+                <div style={{ flexGrow: 1 }}>
+                  <h3>{item.name}</h3>
+                  <p>Price: ${item.price}</p>
+                </div>
+                <button
+                  onClick={() => handleRemoveFromCart(item)}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '5px 10px', cursor: 'pointer' }}
+                >
+                  Remove
+                </button>
+              
             </li>
           ))}
         </ul>

@@ -5,7 +5,7 @@ const sqlite3 = require("sqlite3").verbose();
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ }));
+app.use(cors());
 app.use(express.json()); 
 
 const dbPath = path.join(__dirname, "dogs.db");

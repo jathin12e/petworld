@@ -72,7 +72,7 @@ const home = () => {
     <div className='page-extend'>
         <div className='home-page'>
             <div className='part'>
-                <h1>WELCOME TO <span style={{color: "red"}}>PET WORLD</span> <br /><span className='font'>Find Your <span style={{color: "red"}}>Loyal Friend</span></span></h1>
+                <h1 className='font'>WELCOME TO <span style={{color: "red"}}>PET WORLD</span> <br /><span className='font'>Find Your <span style={{color: "red"}}>Loyal Friend</span></span></h1>
                 
             </div>
             <div>
@@ -142,12 +142,12 @@ const home = () => {
         <div className='back'>
             <h1>Contact Us</h1>
             <div className='contact-position'>
-                <h3>Email : muppalaJathin@gmail.com</h3>
+                <h3>muppalaJathin@gmail.com</h3>
                 <h3>Phone No : 7305929739</h3>
             </div> 
             <div className='align'>
               <input type='text' placeholder='ask queastion' className='input2'/> 
-              <button className='input2'>post</button>
+              <button className='input2' style={{margin:"10px"}}>post</button>
             </div>
         </div>
     </div>

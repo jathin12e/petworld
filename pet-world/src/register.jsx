@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div style={styles.container}>
       {error && <p style={styles.error}>{error}</p>}
-      <div className="position">
+      <div className="login-position">
         <img src="images/images (4).jpeg" height={300} style={{ paddingRight: "10px" }} />
         <form onSubmit={handleRegister} style={styles.form}>
           <h2 style={{ textDecoration: "underline" }}>Register</h2>
@@ -78,7 +78,7 @@ const Register = () => {
 };
 
 const styles = {
-  container: { maxWidth: "300px", margin: "50px auto", textAlign: "center" },
+  container: { maxWidth: "700px", margin: "50px auto", textAlign: "center" },
   form: { display: "flex", flexDirection: "column", gap: "10px" },
   input: { padding: "10px", fontSize: "16px" },
   button: { padding: "10px", fontSize: "16px", background: "green", color: "white", border: "none" },
