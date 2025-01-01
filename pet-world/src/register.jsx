@@ -41,7 +41,7 @@ const Register = () => {
     <div style={styles.container}>
       {error && <p style={styles.error}>{error}</p>}
       <div className="login-position">
-        <img src="images/images (4).jpeg" height={300} style={{ paddingRight: "10px" }} />
+        <img src="images/images (4).jpeg" height={300} style={{ paddingRight: "10px" }} className="image-position"/>
         <form onSubmit={handleRegister} style={styles.form}>
           <h2 style={{ textDecoration: "underline" }}>Register</h2>
           <input

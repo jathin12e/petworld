@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
 }
+
 .part{
     display: flex;
     flex-direction: column;
@@ -67,5 +68,8 @@
     }
     .font{
         font-size: 25px;
+    }
+    .selling-position{
+        font-size: 30px;
     }
 }

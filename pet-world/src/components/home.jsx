@@ -102,15 +102,15 @@ const home = () => {
                 </a>   
             </div>
             <div className='text-position'>
-                <h1>Choose Your Pet</h1>
+                <h1 style={{fontSize:"30px"}}>Choose Your Pet</h1>
                 <div className='down-symbol'>
                     <h3><i class="fa-solid fa-chevron-down fa-beat"></i></h3>
                 </div>
             </div>
         </div>
         <div className='dogs-position'>
-            <div className='selling-position'>
-            <h1>Top Selling Dogs</h1>
+            <div>
+               <h1 className='selling-position'>Top Selling Dogs</h1>
             </div>
             {dogindex.map((p) => {
             return(
@@ -124,8 +124,8 @@ const home = () => {
             <button className='button'><Link to='/dogs'>see more</Link></button>
         </div>
         <div className='cats-position'>
-            <div className='selling-position'>
-            <h1>Top Selling Cats</h1>
+            <div>
+            <h1 className='selling-position'>Top Selling Cats</h1>
             </div>
             {catindex.map((p) => {
             return(
