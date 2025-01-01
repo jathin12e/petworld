@@ -42,21 +42,21 @@ const App = () => {
 
   useEffect(() => {
     // Fetch dogs data
-    axios.get("http://192.168.0.107:8080/dogs/")
+    axios.get("http://localhost:8080/dogs/")
       .then((res) => setDogs(res.data))
       .catch((error) => console.error('Error fetching dogs', error));
   }, []);
 
   useEffect(() => {
     // Fetch cats data
-    axios.get("http://192.168.0.107:8080/cats/")
+    axios.get("http://localhost:8080/cats/")
       .then((res) => setCats(res.data))
       .catch((error) => console.error('Error fetching cats', error));
   }, []);
 
   useEffect(() => {
     // Fetch selected pet details (default example)
-    axios.get("http://192.168.0.107:8080/pets/")
+    axios.get("http://localhost:8080/pets/")
       .then((res) => setSelectedPet(res.data))
       .catch((error) => console.error('Error fetching pet details', error));
   }, []);

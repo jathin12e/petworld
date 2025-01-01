@@ -20,7 +20,7 @@ const CartPage = () => {
           {cartItems.map((item, index) => (
             <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', border: '1px solid #ddd', padding: '10px' }}>
               <img
-                src={`http://192.168.0.107:8080/images/${item.image}`}
+                src={`http://localhost:8080/images/${item.image}`}
                 alt={item.name}
                 style={{ width: '100px', height: '100px', marginRight: '10px' }}
               />

@@ -20,8 +20,8 @@ const connectDbAndServer = async () => {
       filename: dbPath,
       driver: sqlite3.Database
     });
-    app.listen(8080, '192.168.0.107' , () => {
-      console.log("Server running at http://192.168.0.107:8080/");
+    app.listen(8080,  () => {
+      console.log("Server running at http://localhost:8080/");
     });
   } catch (e) {
     console.error(`DB Error: ${e.message}`);

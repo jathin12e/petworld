@@ -10,7 +10,7 @@ const CatDetailsPage = () => {
 
   useEffect(() => {
     // Fetch the cat details based on the ID from the URL
-    fetch(`http://192.168.0.107:8080/pets/${id}`)
+    fetch(`http://localhost:8080/pets/${id}`)
       .then((response) => response.json())
       .then((data) => setCat(data))
       .catch((error) => console.error('Error fetching cat:', error));
@@ -24,7 +24,7 @@ const CatDetailsPage = () => {
     <div className="position">
       <div className="position-1">
         <img
-          src={`http://192.168.0.107:8080/images/${cat.image}`}
+          src={`http://localhost:8080/images/${cat.image}`}
           alt={cat.name}
           width="500"
         />
