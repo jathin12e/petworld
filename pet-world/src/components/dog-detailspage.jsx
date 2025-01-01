@@ -10,21 +10,21 @@ const ProductDetailsPage = () => {
 
   useEffect(() => {
     // Fetch the dog details based on the ID from the URL
-    fetch(`http://localhost:8080/pets/${id}`)
+    fetch(`https://petworld-2bwh.onrender.com/pets/${id}`)
       .then((response) => response.json())
       .then((data) => setDog(data))
       .catch((error) => console.error('Error fetching dog:', error));
   }, [id]);
 
   if (!dog) {
-    return <div>Dog not found</div>;
+    return <div></div>;
   }
 
   return (
     <div className="position">
       <div className="position-1">
         <img
-          src={`http://localhost:8080/images/${dog.image}`}
+          src={`https://petworld-2bwh.onrender.com/images/${dog.image}`}
           alt={dog.name}
           width="400"
         />

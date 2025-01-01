@@ -31,7 +31,7 @@ const Nav = () => {
   const handleSearch = async (e) => {
     if (e.key === "Enter" && searchQuery.trim() !== "") {
       try {
-        const response = await axios.get(`http://localhost:8080/search?name=${searchQuery}`);
+        const response = await axios.get(`https://petworld-2bwh.onrender.com/search?name=${searchQuery}`);
         const pets = response.data;
   
         if (pets.length === 1) {
