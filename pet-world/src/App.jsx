@@ -42,21 +42,21 @@ const App = () => {
 
   useEffect(() => {
     // Fetch dogs data
-    axios.get("https://petworld-2bwh.onrender.com/dogs/")
+    axios.get("https://petworld-h7ux.onrender.com/dogs/")
       .then((res) => setDogs(res.data))
       .catch((error) => console.error('Error fetching dogs', error));
   }, []);
 
   useEffect(() => {
     // Fetch cats data
-    axios.get("https://petworld-2bwh.onrender.com/cats/")
+    axios.get("https://petworld-h7ux.onrender.com/cats/")
       .then((res) => setCats(res.data))
       .catch((error) => console.error('Error fetching cats', error));
   }, []);
 
   useEffect(() => {
     // Fetch selected pet details (default example)
-    axios.get("https://petworld-2bwh.onrender.com/pets/")
+    axios.get("https://petworld-h7ux.onrender.com/pets/")
       .then((res) => setSelectedPet(res.data))
       .catch((error) => console.error('Error fetching pet details', error));
   }, []);

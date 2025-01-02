@@ -20,7 +20,7 @@ const CartPage = () => {
           {cartItems.map((item, index) => (
             <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', border: '1px solid #ddd', padding: '10px' }}>
               <img
-                src={`https://petworld-2bwh.onrender.com/images/${item.image}`}
+                src={`https://petworld-h7ux.onrender.com/images/${item.image}`}
                 alt={item.name}
                 style={{ width: '100px', height: '100px', marginRight: '10px' }}
               />

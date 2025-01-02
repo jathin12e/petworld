@@ -28,7 +28,7 @@ const Nav = () => {
     }
   };
   const onChange = (e) =>{
-    setSearchQuery(e.target.value) 
+    
   }
  
   // Updated handleSearch to search for both dogs and cats and navigate to correct detail page
@@ -36,7 +36,7 @@ const Nav = () => {
     if (e.key === "Enter" && searchQuery.trim() !== "") {
       
       try {
-        const response = await axios.get(`https://petworld-2bwh.onrender.com/search?name=${searchQuery}`);
+        const response = await axios.get(`https://petworld-h7ux.onrender.com/search?name=${searchQuery}`);
         const pets = response.data;
   
         if (pets.length === 1) {
@@ -75,7 +75,7 @@ const Nav = () => {
             placeholder="Search pets... and enter"
             className="input"
             value={searchQuery}
-            onChange={onChange}
+            onChange={(e) =>  setSearchQuery(e.target.value)}
             onKeyPress={handleSearch} 
              // Trigger search on Enter key press
           />

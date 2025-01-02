@@ -10,7 +10,7 @@ const CatDetailsPage = () => {
 
   useEffect(() => {
     // Fetch the cat details based on the ID from the URL
-    fetch(`https://petworld-2bwh.onrender.com/pets/${id}`)
+    fetch(`https://petworld-h7ux.onrender.com/pets/${id}`)
       .then((response) => response.json())
       .then((data) => setCat(data))
       .catch((error) => console.error('Error fetching cat:', error));
@@ -24,7 +24,7 @@ const CatDetailsPage = () => {
     <div className="position">
       <div className="position-1">
         <img
-          src={`https://petworld-2bwh.onrender.com/images/${cat.image}`}
+          src={`https://petworld-h7ux.onrender.com/images/${cat.image}`}
           alt={cat.name}
           className='image-position'
         />
