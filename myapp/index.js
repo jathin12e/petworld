@@ -81,3 +81,4 @@ app.get("/pets/:id", async (req, res) => {
     res.status(500).send({ error: "Error retrieving pet" });
   }
 });
+

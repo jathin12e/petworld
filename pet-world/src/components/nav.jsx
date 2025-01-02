@@ -8,6 +8,7 @@ import axios from "axios";  // Ensure axios is imported for making API requests
 const Nav = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [input, update] = useState()
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,10 +27,14 @@ const Nav = () => {
       console.error("Logout failed: ", err.message);
     }
   };
-
+  const onChange = (e) =>{
+    setSearchQuery(e.target.value) 
+  }
+ 
   // Updated handleSearch to search for both dogs and cats and navigate to correct detail page
   const handleSearch = async (e) => {
     if (e.key === "Enter" && searchQuery.trim() !== "") {
+      
       try {
         const response = await axios.get(`https://petworld-2bwh.onrender.com/search?name=${searchQuery}`);
         const pets = response.data;
@@ -37,9 +42,11 @@ const Nav = () => {
         if (pets.length === 1) {
           const pet = pets[0];
           if (pet.category === "dog") {
-            navigate(`/dog-detailspage/${pet.id}`);  // Redirect to dog detail page
+            navigate(`/dog-detailspage/${pet.id}`); 
+            e.preventDefault() // Redirect to dog detail page
           } else if (pet.category === "cat") {
-            navigate(`/cat-detailspage/${pet.id}`);  // Redirect to cat detail page
+            navigate(`/cat-detailspage/${pet.id}`); 
+            e.preventDefault() // Redirect to cat detail page
           }
         } else {
           alert("No or multiple pets found with that name.");
@@ -68,8 +75,9 @@ const Nav = () => {
             placeholder="Search pets... and enter"
             className="input"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onKeyPress={handleSearch}  // Trigger search on Enter key press
+            onChange={onChange}
+            onKeyPress={handleSearch} 
+             // Trigger search on Enter key press
           />
           
         </div>
