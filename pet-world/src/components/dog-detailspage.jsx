@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from './CartContext';
 import './details.css';
+import {Link} from 'react-router-dom'
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const ProductDetailsPage = () => {
           <h1 style={{color:"red"}}>{dog.name}</h1>
           <p>Price: ${dog.price}</p>
           <p style={{color:"grey"}}>{dog.DES}</p>
-          <button className="btn btn-outline-primary">Order Now</button>&nbsp;
+          <button className="btn btn-outline-primary"><Link to={`/order/${dog.id}`} style={{color:"white"}}>Order Now</Link></button>&nbsp;
           <button
             onClick={() => {
               addToCart(dog);

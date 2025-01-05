@@ -13,6 +13,7 @@ import Register from "./register";
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase'; 
 import axios from "axios";
+import Order from './components/order'
 
 const App = () => {
   const [dogs, setDogs] = useState([]);
@@ -20,6 +21,7 @@ const App = () => {
   const [selectedPet, setSelectedPet] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const [pet,setpet] = useState([])
 
   useEffect(() => {
     // Firebase auth state listener
@@ -60,6 +62,12 @@ const App = () => {
       .then((res) => setSelectedPet(res.data))
       .catch((error) => console.error('Error fetching pet details', error));
   }, []);
+  useEffect(() => {
+    // Fetch selected pet details (default example)
+    axios.get("https://petworld-h7ux.onrender.com/pets/")
+      .then((res) => setpet(res.data))
+      .catch((error) => console.error('Error fetching pet details', error));
+  }, []);
 
   return (
     <CartProvider>
@@ -74,6 +82,7 @@ const App = () => {
           <Route path='/dog-detailspage/:id' element={<Detail1 data={dogs} />} />
           <Route path='/cat-detailspage/:id' element={<Detail2 data={cats} />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/order/:id' element={<Order data={pet} />} />
         </Routes>
       </div>
     </CartProvider>

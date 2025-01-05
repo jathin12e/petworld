@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams , Link } from 'react-router-dom';
 import './details.css';
 import { useCart } from './CartContext';
 
@@ -32,7 +32,7 @@ const CatDetailsPage = () => {
           <h1 style={{color:"red"}}>{cat.name}</h1>
           <p>Price: ${cat.price}</p>
           <p style={{color:"grey"}}>{cat.DES}</p>
-          <button className="btn btn-outline-primary">Order Now</button>&nbsp;
+          <button className="btn btn-outline-primary"><Link to={`/order/${cat.id}`}>Order Now</Link></button>&nbsp;
           <button
             onClick={() => {
               addToCart(cat);

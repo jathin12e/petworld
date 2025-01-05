@@ -8,7 +8,6 @@ import axios from "axios";  // Ensure axios is imported for making API requests
 const Nav = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [input, update] = useState()
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,9 +26,7 @@ const Nav = () => {
       console.error("Logout failed: ", err.message);
     }
   };
-  const onChange = (e) =>{
-    
-  }
+
  
   // Updated handleSearch to search for both dogs and cats and navigate to correct detail page
   const handleSearch = async (e) => {
@@ -43,10 +40,10 @@ const Nav = () => {
           const pet = pets[0];
           if (pet.category === "dog") {
             navigate(`/dog-detailspage/${pet.id}`); 
-            e.preventDefault() // Redirect to dog detail page
+            e.preventDefault()
           } else if (pet.category === "cat") {
             navigate(`/cat-detailspage/${pet.id}`); 
-            e.preventDefault() // Redirect to cat detail page
+            e.preventDefault()
           }
         } else {
           alert("No or multiple pets found with that name.");
