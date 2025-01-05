@@ -32,6 +32,7 @@ const CatDetailsPage = () => {
           <h1 style={{color:"red"}}>{cat.name}</h1>
           <p>Price: ${cat.price}</p>
           <p style={{color:"grey"}}>{cat.DES}</p>
+          <button className='btn btn-primary' style={{margin:"10px"}}><a href={dog.video} style={{color:"white"}}>video</a></button>
           <button className="btn btn-outline-primary"><Link to={`/order/${cat.id}`}>Order Now</Link></button>&nbsp;
           <button
             onClick={() => {
