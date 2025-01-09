@@ -82,3 +82,11 @@ app.get("/pets/:id", async (req, res) => {
   }
 });
 
+app.post('/pet/' , async(req,res) =>{
+  const req1 = req.body
+  const {id , name , price} = req1 
+  const query = `insert into pets (id , name , price)values (${id} , '${name}' , ${price})`
+  const db1 = await db.run(query)
+  const pet_id = db1.lastID
+  res.send({id:pet_id})
+})

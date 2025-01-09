@@ -55,7 +55,7 @@ const DogsPage = ({data}) => {
       <div style={{ display: 'flex', flexWrap: 'wrap',justifyContent:"center"}}>
         {data.map((u) => (
               <div key={u.id} style={{ margin: '10px', border: '0px solid #ddd', padding: '10px',cursor:'pointer' }}>
-                <Link style={{color:"#000", textDecoration:"none"}} to={`/cat-detailspage/${u.id}`}><img src={`https://petworld-h7ux.onrender.com/images/${u.image}`} alt={u.name} style={{ width: '300px', height: '300px' , borderRadius:"20px" }} />
+                <Link style={{color:"#000", textDecoration:"none"}} to={`/cats/cat-detailspage/${u.id}`}><img src={`https://petworld-h7ux.onrender.com/images/${u.image}`} alt={u.name} style={{ width: '300px', height: '300px' , borderRadius:"20px" }} />
                 <h3>{u.name}</h3>
                 <p style={{color:"grey"}}>Price: {u.price}</p></Link>
                 <button onClick={() => {addToCart(u); alert(`${u.name} has been added to the cart!`);}} className='btn btn-outline-primary'>Add to Cart</button>

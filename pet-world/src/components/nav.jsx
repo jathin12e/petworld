@@ -31,7 +31,7 @@ const Nav = () => {
   // Updated handleSearch to search for both dogs and cats and navigate to correct detail page
   const handleSearch = async (e) => {
     if (e.key === "Enter" && searchQuery.trim() !== "") {
-      
+      e.preventDefault()
       try {
         const response = await axios.get(`https://petworld-h7ux.onrender.com/search?name=${searchQuery}`);
         const pets = response.data;
@@ -39,10 +39,9 @@ const Nav = () => {
         if (pets.length === 1) {
           const pet = pets[0];
           if (pet.category === "dog") {
-            navigate(`/dog-detailspage/${pet.id}`); 
-            e.preventDefault()
+            navigate(`/dogs/dog-detailspage/${pet.id}`); 
           } else if (pet.category === "cat") {
-            navigate(`/cat-detailspage/${pet.id}`); 
+            navigate(`/cats/cat-detailspage/${pet.id}`); 
             e.preventDefault()
           }
         } else {

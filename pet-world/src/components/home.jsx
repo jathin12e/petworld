@@ -146,7 +146,7 @@ const home = () => {
                 <h3>Phone No : 7305929739</h3>
             </div> 
             <div className='align'>
-              <input type='text' placeholder='ask queastion' className='input2'/> 
+              <input type='text' placeholder='ask question' className='input2'/> 
               <button className='input2' style={{margin:"10px"}}>post</button>
             </div>
         </div>

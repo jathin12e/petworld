@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from './CartContext';
 import './cart.css'
+import {Link} from 'react-router-dom'
 
 
 const CartPage = () => {
@@ -19,12 +20,12 @@ const CartPage = () => {
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           {cartItems.map((item, index) => (
             <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px', border: '1px solid #ddd', padding: '10px' }}>
-              <img
+               <Link to={`/order/${item.id}`}><img
                 src={`https://petworld-h7ux.onrender.com/images/${item.image}`}
                 alt={item.name}
                 style={{ width: '100px', height: '100px', marginRight: '10px' }}
               />
-              
+              </Link>
                 <div style={{ flexGrow: 1 }}>
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>

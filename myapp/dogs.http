@@ -12,3 +12,14 @@ GET http://localhost:8080/pets/1
 GET http://localhost:8080/search?query=saimese
 
 
+###
+
+POST http://localhost:8080/pet/
+Content-Type: application/json
+
+{
+  "id":17,
+  "name":"dog",
+  "price": 11
+
+}
