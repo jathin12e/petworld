@@ -114,7 +114,7 @@ const home = () => {
             </div>
             {dogindex.map((p) => {
             return(
-              <Link style={{color:"#000", textDecoration:"none"}} to={`/dog-detailspage/${p.id}`}><div>
+              <Link style={{color:"#000", textDecoration:"none"}} to={`/dogs/dog-detailspage/${p.id}`}><div>
                     <img src={p.image} className='image1'/>
                     <h3>{p.name}</h3>
                     <p>{p.price}</p>
@@ -129,7 +129,7 @@ const home = () => {
             </div>
             {catindex.map((p) => {
             return(
-                <Link style={{color:"#000", textDecoration:"none"}} to={`/cat-detailspage/${p.id}`}><div>
+                <Link style={{color:"#000", textDecoration:"none"}} to={`/cats/cat-detailspage/${p.id}`}><div>
                     <img src={p.image}  className='image1'/>
                     <h3>{p.name}</h3>
                     <p>{p.price}</p>
