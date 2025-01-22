@@ -33,7 +33,7 @@ const ProductDetailsPage = () => {
           <h1 style={{color:"red"}}>{dog.name}</h1>
           <p>Price: ${dog.price}</p>
           <p style={{color:"grey"}}>{dog.DES}</p>
-          <button className='btn btn-primary' style={{margin:"10px"}}><a href={dog.video} style={{color:"white"}}>video</a></button>
+          <button className='btn btn-primary' style={{margin:"10px"}}><a href={dog.video} target="_blank" style={{color:"white"}} >video</a></button>
           <button className="btn btn-outline-primary"><Link to={`/order/${dog.id}`} >Order Now</Link></button>&nbsp;
           <button
             onClick={() => {
