@@ -16,7 +16,7 @@ const dogindex =[
       id:2,
       image:"images/download (1).jpeg",
       name:"Bull Dog",
-      price:10500
+      price:10550
     },
     {
       id:3,
