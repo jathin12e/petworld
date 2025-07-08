@@ -7,6 +7,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json()); 
+app.use(express.static('build'))
 
 const dbPath = path.join(__dirname, "dogs.db");
 let db = null;
@@ -24,7 +25,7 @@ const connectDbAndServer = async () => {
       console.log("Server running at http://localhost:8080/");
     });
   } catch (e) {
-    console.error(`DB Error: ${e.message}`);
+    console.error(`DB Errora: ${e.message}`);
     process.exit(1);
   }
 };
@@ -90,3 +91,10 @@ app.post('/pet/' , async(req,res) =>{
   const pet_id = db1.lastID
   res.send({id:pet_id})
 })
+
+
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
