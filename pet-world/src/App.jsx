@@ -63,7 +63,7 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/dogs' element={<Dogsection data={dogs} />} />
+          <Route path='petworld-1.onrender.com/dogs' element={<Dogsection data={dogs} />} />
           <Route path='/cats' element={<Catsection data={cats} />} />
           <Route path='/cart/' element={<Cart />} />
           <Route path='/login' element={<Login />} />
